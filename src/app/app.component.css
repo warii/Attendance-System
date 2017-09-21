@@ -1,2 +1,5 @@
-
-h1{color: #1074D9;}
+.navbar-default {
+    background-color: #4BC6FA;
+    border-color: #E7E7E7;
+}
+h1{color: white;}

@@ -1,7 +1,9 @@
 
+
 // import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { SubjectsComponent } from './components/subjects/subjects.component';
+import {ClassesComponent} from './components/classes/classes.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -19,6 +21,10 @@ const routes: Routes = [
     path: 'subjects',
     component: SubjectsComponent,
   },
+  {
+    path: 'classes',
+    component: ClassesComponent
+  }
 ];
 
 @NgModule({
