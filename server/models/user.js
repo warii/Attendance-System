@@ -1,21 +1,20 @@
+import mongoose from 'mongoose';
+//import Version from './version';
+const Schema = mongoose.Schema;
 //Creates a model of the User which can be used to add users to the database.
 
-// Import the things we need
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-
 // Create a schema
-var userSchema = new Schema({
-  _id: { type: String },
-  ID: { type: String, unique: true },
-  firstname: { type: String },
-  lastname: { type: String },
-  password: { type: String },
+const UserSchema = new Schema({
+    _id: { type: String },
+    ID: { type: String, unique: true },
+    firstname: { type: String, unique: [true, 'Password is required.'] },
+    lastname: { type: String },
+    password: { type: String },
 });
 
 // the schema is useless so far
 // we need to create a model using it
-var User = mongoose.model('User', userSchema);
+var UserModel = mongoose.model('User', userSchema);
 
 // make this available to our users in our Node applications
-module.exports = User;
+export default UserModer;
