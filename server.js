@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 // Mongodb creation
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/journaldb');
+mongoose.connect('mongodb://localhost:27017/attsystem');
 
 // Get our API routes
 const api = require('./server/routes/api');
