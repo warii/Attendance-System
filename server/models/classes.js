@@ -5,3 +5,7 @@ const Schema = mongoose.Schema;
 const ClassSchema = new Schema({
 
 })
+
+var ClassModel = mongoose.model('Class', ClassSchema);
+
+export default ClassModel

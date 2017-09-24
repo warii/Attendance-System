@@ -4,10 +4,9 @@ const Schema = mongoose.Schema;
 
 const SubjectSchema = new Schema({
     user: [user.schema],
-    time: {
-        type: String,
 
-    },
+    classes: [classes.schema],
+
     name: {
         type: String,
     }
@@ -15,4 +14,4 @@ const SubjectSchema = new Schema({
 
 const SubjectModel = mongoose.model('Subject', SubjectSchema);
 
-export default EntryModel;
+export default SubjectModel;
