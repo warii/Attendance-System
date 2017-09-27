@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 // Mongodb creation
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/journaldb');
+mongoose.connect('mongodb://localhost:27017/attsys');
 
 // Get our API routes
 const api = require('./server/routes/api');
@@ -25,7 +25,7 @@ app.use('/api', api);
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 /**

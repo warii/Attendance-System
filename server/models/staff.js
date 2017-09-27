@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 //import Version from './version';
 const Schema = mongoose.Schema;
 //Creates a model of the User which can be used to add users to the database.
@@ -14,7 +14,7 @@ const StaffSchema = new Schema({
 
 // the schema is useless so far
 // we need to create a model using it
-var StaffModel = mongoose.model('Student', StaffSchema);
+var StaffModel = mongoose.model('Staff', StaffSchema);
 
 // make this available to our users in our Node applications
-export default StaffModel;
+module.exports = StaffModel;
