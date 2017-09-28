@@ -10,6 +10,8 @@ import { ApiService } from './api.service';
 import { LoginComponent } from './components/login/login.component';
 import { SubjectsComponent } from './components/subjects/subjects.component';
 import { ClassesComponent } from './components/classes/classes.component';
+import { AttendComponent } from './components/attend/attend.component';
+import { AttendedComponent } from './components/attended/attended.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { ClassesComponent } from './components/classes/classes.component';
     LoginComponent,
     SubjectsComponent,
     ClassesComponent,
+    AttendComponent,
+    AttendedComponent,
   ],
   imports: [
     BrowserModule,

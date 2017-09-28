@@ -6,11 +6,7 @@ const bodyParser = require('body-parser');
 
 // Mongodb creation
 const mongoose = require('mongoose');
-<<<<<<< HEAD
 mongoose.connect('mongodb://localhost:27017/attsystem');
-=======
-mongoose.connect('mongodb://localhost:27017/attsys');
->>>>>>> SubjectBackend
 
 // Get our API routes
 const api = require('./server/routes/api');
