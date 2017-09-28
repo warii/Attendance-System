@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const Student = require('../models/students');
 const Attendance = require('../models/attendance');
 
+mongoose.Promise = global.Promise;
+
 function getNextSequenceValue(sequenceName) {
     return new Promise(function(resolve, reject) {
         var sequenceDocument = Counters.findByIdAndUpdate(
@@ -66,6 +68,23 @@ router.post('/student/:id/classes/:id/attendance', (req, res) => {
     Attendance.create(req.body);
     res.send({
         attendance: req.body.attendance
+    });
+});
+
+//practicing writing RESTful requests
+router.post('/ninjas', (req, res, next) => {
+    Student.create(req.body).then(function(student) {
+        res.send(student);
+    });
+});
+
+router.post('test', (req, res) => {
+    res.send({ type: 'POST' });
+});
+
+router.get('/ninjas', (req, res) => {
+    Student.findById(id, function(err, student) {
+        res.send(student.ID);
     });
 });
 module.exports = router;
